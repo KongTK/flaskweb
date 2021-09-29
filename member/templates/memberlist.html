@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 목록</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+     <nav>
+        <a href="{{ url_for('main') }}">Home | </a>
+        <a href="{{ url_for('memberlist') }}">회원목록 | </a>
+        <a href="{{ url_for('register') }}">회원가입 | </a>
+    </nav>
+    <h2>회원 목록</h2>
+    <table>
+        <tr>
+            <th>아이디</th><th>패스워드</th><th>이름</th><th>나이</th><th>가입일</th>
+        </tr>
+        {% for i in rs %}
+        <tr>
+
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
