@@ -6,11 +6,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for('main') }}">Home | </a>
-        <a href="{{ url_for('memberlist') }}">회원목록 | </a>
-        <a href="{{ url_for('register') }}">회원가입 | </a>
-    </nav>
+    {% include 'navbar.html' %}
+    <!-- 외부 파일 포함, 가져오기 -->
     <h2>안녕하세요~ 회원 관리 사이트입니다</h2>
 </body>
 </html>
