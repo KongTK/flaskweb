@@ -15,4 +15,9 @@ def loopindex():
 def node():
     return render_template('node.html')
 
+@app.route('/nodeimg')
+def nodeimg():
+    return render_template('nodeimg.html')
+
+
 app.run()
